@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Ranking Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="survey-container">
+
+        <header class="survey-header">
+            <p class="survey-date">05/2026</p>
+            <h1>Feature Ranking Survey</h1>
+
+            <p class="intro">
+                The goal of this survey is to learn which features users care about the most before usability testing.
+            </p>
+
+            <p class="intro">
+                This app combines credible media, category-based scrolling, and social interaction with friends.
+                Your answers will help decide which features should be built first.
+            </p>
+        </header>
+
+        <form id="surveyForm" action="https://formspree.io/f/xeenlrqq" method="POST">
+
+            <!-- Participant Info -->
+            <section class="form-section">
+                <h2>Participant Information</h2>
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </section>
+
+            <!-- Concept Intro -->
+            <section class="form-section">
+                <h2>Concept Intro</h2>
+
+                <div class="form-group">
+                    <label for="question_1">
+                        1. How interested would you be in using an app that combines credible media,
+                        category-based scrolling, and social interaction with friends?
+                    </label>
+
+                    <select id="question_1" name="concept_interest" required>
+                        <option value="">Select an answer</option>
+                        <option value="Very interested">Very interested</option>
+                        <option value="Somewhat interested">Somewhat interested</option>
+                        <option value="Not sure">Not sure</option>
+                        <option value="Not very interested">Not very interested</option>
+                        <option value="Not interested at all">Not interested at all</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Top 5 Feature Selection -->
+            <section class="form-section">
+                <h2>Top 5 Feature Selection</h2>
+                <p class="helper-text">Choose exactly 5 features that matter most to you.</p>
+
+                <fieldset>
+                    <legend>2. What are your top 5 most important features?</legend>
+
+                    <label><input type="checkbox" name="top_features[]" value="Breaking news feed"> Breaking news feed</label>
+                    <label><input type="checkbox" name="top_features[]" value="Category-based scrolling"> Category-based scrolling</label>
+                    <label><input type="checkbox" name="top_features[]" value="Credible source labels"> Credible source labels</label>
+                    <label><input type="checkbox" name="top_features[]" value="Article images and short summaries"> Article images and short summaries</label>
+                    <label><input type="checkbox" name="top_features[]" value="Engage button"> Engage button</label>
+                    <label><input type="checkbox" name="top_features[]" value="Like and dislike reactions"> Like and dislike reactions</label>
+                    <label><input type="checkbox" name="top_features[]" value="Commenting on content"> Commenting on content</label>
+                    <label><input type="checkbox" name="top_features[]" value="Sharing content with friends"> Sharing content with friends</label>
+                    <label><input type="checkbox" name="top_features[]" value="Direct messaging"> Direct messaging</label>
+                    <label><input type="checkbox" name="top_features[]" value="Saving content for later"> Saving content for later</label>
+                </fieldset>
+            </section>
+
+            <!-- Most and Least Important Features -->
+            <section class="form-section">
+                <h2>Feature Priority</h2>
+
+                <div class="form-group">
+                    <label for="question_3">
+                        3. Out of the 5 features you chose, which one is the most important to you?
+                    </label>
+                    <input type="text" id="question_3" name="most_important_feature" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="question_4">
+                        4. Out of the 5 features you chose, which one is the least important to you?
+                    </label>
+                    <input type="text" id="question_4" name="least_important_feature" required>
+                </div>
+            </section>
+
+            <!-- Engage Button -->
+            <section class="form-section">
+                <h2>Engage Button</h2>
+
+                <div class="form-group">
+                    <label for="question_5">
+                        5. How useful does an “Engage” button sound?
+                    </label>
+
+                    <select id="question_5" name="engage_button_usefulness" required>
+                        <option value="">Select an answer</option>
+                        <option value="Very useful">Very useful</option>
+                        <option value="Somewhat useful">Somewhat useful</option>
+                        <option value="Not sure">Not sure</option>
+                        <option value="Not very useful">Not very useful</option>
+                        <option value="Not useful at all">Not useful at all</option>
+                    </select>
+                </div>
+
+                <fieldset>
+                    <legend>6. What engagement options should be available?</legend>
+
+                    <label><input type="checkbox" name="engage_options[]" value="Like"> Like</label>
+                    <label><input type="checkbox" name="engage_options[]" value="Dislike"> Dislike</label>
+                    <label><input type="checkbox" name="engage_options[]" value="Comment"> Comment</label>
+                    <label><input type="checkbox" name="engage_options[]" value="Share"> Share</label>
+                    <label><input type="checkbox" name="engage_options[]" value="Save"> Save</label>
+                    <label><input type="checkbox" name="engage_options[]" value="Message to a friend"> Message to a friend</label>
+                    <label><input type="checkbox" name="engage_options[]" value="Report"> Report</label>
+                </fieldset>
+            </section>
+
+            <!-- Action Button Layout -->
+            <section class="form-section">
+                <h2>Action Button Layout Preference</h2>
+
+                <div class="form-group">
+                    <label for="question_7">
+                        7. Should engagement options be hidden inside the “Engage” button or shown directly on the article card?
+                    </label>
+
+                    <select id="question_7" name="action_button_layout_preference" required>
+                        <option value="">Select an answer</option>
+                        <option value="Hidden inside one Engage button">Hidden inside one Engage button</option>
+                        <option value="Shown directly on the article card">Shown directly on the article card</option>
+                        <option value="Show Like/Dislike, hide the rest inside Engage">Show Like/Dislike, hide the rest inside Engage</option>
+                        <option value="Not sure">Not sure</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Category Preference -->
+            <section class="form-section">
+                <h2>Category Preference</h2>
+
+                <fieldset>
+                    <legend>8. Which categories of content would you scroll through?</legend>
+
+                    <label><input type="checkbox" name="category_preference[]" value="Breaking news"> Breaking news</label>
+                    <label><input type="checkbox" name="category_preference[]" value="Local news"> Local news</label>
+                    <label><input type="checkbox" name="category_preference[]" value="Sports"> Sports</label>
+                    <label><input type="checkbox" name="category_preference[]" value="Technology"> Technology</label>
+                    <label><input type="checkbox" name="category_preference[]" value="Business"> Business</label>
+                    <label><input type="checkbox" name="category_preference[]" value="Entertainment"> Entertainment</label>
+                    <label><input type="checkbox" name="category_preference[]" value="Culture"> Culture</label>
+                    <label><input type="checkbox" name="category_preference[]" value="Politics"> Politics</label>
+                    <label><input type="checkbox" name="category_preference[]" value="World news"> World news</label>
+                    <label><input type="checkbox" name="category_preference[]" value="Health"> Health</label>
+                    <label><input type="checkbox" name="category_preference[]" value="Opinion"> Opinion</label>
+                    <label><input type="checkbox" name="category_preference[]" value="Good news"> Good news</label>
+                </fieldset>
+            </section>
+
+            <!-- Trust and Credibility -->
+            <section class="form-section">
+                <h2>Trust and Credibility Labels</h2>
+
+                <fieldset>
+                    <legend>9. What would make the content feel trustworthy?</legend>
+
+                    <label><input type="checkbox" name="trust_labels[]" value="Clear source name"> Clear source name</label>
+                    <label><input type="checkbox" name="trust_labels[]" value="Verified source label"> Verified source label</label>
+                    <label><input type="checkbox" name="trust_labels[]" value="Author name"> Author name</label>
+                    <label><input type="checkbox" name="trust_labels[]" value="Published date"> Published date</label>
+                    <label><input type="checkbox" name="trust_labels[]" value="Link to original article"> Link to original article</label>
+                    <label><input type="checkbox" name="trust_labels[]" value="Fact-check label"> Fact-check label</label>
+                    <label><input type="checkbox" name="trust_labels[]" value="Multiple sources reporting the same topic"> Multiple sources reporting the same topic</label>
+                    <label><input type="checkbox" name="trust_labels[]" value="AI-generated content clearly labeled"> AI-generated content clearly labeled</label>
+                </fieldset>
+            </section>
+
+            <!-- Open Feedback -->
+            <section class="form-section">
+                <h2>Open-Ended Feedback</h2>
+
+                <div class="form-group">
+                    <label for="question_10">
+                        10. What would you add, remove, or change?
+                    </label>
+                    <textarea id="question_10" name="open_feedback" rows="5" required></textarea>
+                </div>
+            </section>
+
+            <button type="submit" id="submitBtn">Submit Survey</button>
+        </form>
+
+        <p id="message" role="status"></p>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
